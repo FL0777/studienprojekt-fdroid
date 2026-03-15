@@ -3,29 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein F-Droid Repository</title>
+    <title>Studienprojekt F-Droid Repo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; text-align: center; padding: 40px 20px; background: #f0f2f5; color: #1c1e21; }
-        .card { background: white; padding: 30px; border-radius: 20px; display: inline-block; box-shadow: 0 8px 24px rgba(0,0,0,0.1); max-width: 400px; }
-        h1 { font-size: 1.5rem; margin-bottom: 10px; }
-        p { color: #606770; line-height: 1.4; }
-        .qr-code { margin: 25px 0; padding: 10px; background: #fff; border: 1px solid #ddd; border-radius: 10px; }
-        code { background: #e4e6eb; padding: 8px 12px; border-radius: 6px; display: block; margin: 20px 0; font-family: monospace; font-size: 0.9em; word-break: break-all; }
+        .card { background: white; padding: 30px; border-radius: 20px; display: inline-block; box-shadow: 0 8px 24px rgba(0,0,0,0.1); max-width: 420px; width: 100%; }
+        h1 { font-size: 1.5rem; margin-bottom: 15px; }
+        h3 { font-size: 0.9rem; margin: 0; color: #1c1e21; font-weight: 700; text-transform: uppercase; }
+        p { color: #606770; line-height: 1.4; font-size: 0.9rem; margin: 10px 0; }
+        
+        /* QR Code Styling */
+        .qr-container { margin: 20px 0; padding: 15px; background: #fafafa; border: 1px solid #eaeaea; border-radius: 15px; }
+        .qr-code { padding: 5px; background: #fff; border-radius: 5px; width: 160px; height: 160px; margin: 10px 0; border: 1px solid #ddd; }
+        
+        code { background: #e4e6eb; padding: 10px; border-radius: 6px; display: block; margin: 10px 0; font-family: monospace; font-size: 0.8em; word-break: break-all; border: 1px solid #dcdfe3; }
+        
+        /* Buttons */
+        .button-container { display: flex; flex-direction: column; gap: 12px; margin: 15px 0; }
+        .btn { text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 14px; border-radius: 10px; font-weight: 600; transition: background 0.2s; }
+        
+        .btn-github { background: #24292f; color: white; }
+        .btn-fdroid { background: #317fbb; color: white; }
+        
+        .label-private { color: #d93025; font-size: 0.75rem; font-weight: bold; display: block; margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #e4e6eb; margin: 25px 0; }
         .footer { margin-top: 40px; font-size: 0.8em; color: #90949c; }
     </style>
 </head>
 <body>
+
     <div class="card">
-        <h1>📱 Studienprojekt Repo</h1>
-        <p>Scanne diesen Code mit der F-Droid App, um das Repository hinzuzufügen:</p>
+        <h1>📱 Studienprojekt</h1>
         
-        <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://fl0777.github.io/fdroid-studienprojekt/repo" alt="QR Code für F-Droid Repo">
-        
-        <p>Oder kopiere die URL manuell:</p>
+        <div class="qr-container">
+            <span class="label-private">PRIVATES REPO</span>
+            <h3>Repository hinzufügen</h3>
+            <img class="qr-code" 
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://fl0777.github.io/fdroid-studienprojekt/repo" 
+                 alt="QR Repo">
+            <p>Scanne diesen Code mit der F-Droid App</p>
+        </div>
+
+        <p>Manuelle Repo-URL:</p>
         <code>https://fl0777.github.io/fdroid-studienprojekt/repo</code>
+        
+        <div class="button-container">
+            <a href="https://github.com/FL0777/fdroid-studienprojekt" target="_blank" class="btn btn-github">
+                <i class="fab fa-github"></i> Projekt-Code auf GitHub
+            </a>
+        </div>
+
+        <hr>
+
+        <div class="button-container">
+            <a href="https://f-droid.org" target="_blank" class="btn btn-fdroid">
+                <i class="fab fa-android"></i> Offizielle F-Droid Website
+            </a>
+        </div>
+        
+        <div class="qr-container">
+            <h3>F-Droid Download-Seite</h3>
+            <img class="qr-code" 
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://f-droid.org/de/packages/org.fdroid.fdroid/" 
+                 alt="QR F-Droid Info Seite">
+            <p><small>Zum Download-Bereich auf f-droid.org</small></p>
+        </div>
     </div>
+
     <div class="footer">
-        Erstellt mit ❤️ für F-Droid & GitHub Pages
+        Studienprojekt Repository • Erstellt mit GitHub Pages
     </div>
+
 </body>
 </html>
