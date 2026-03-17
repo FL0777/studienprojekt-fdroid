@@ -1,1 +1,3 @@
 # fdroid-studienprojekt
+
+Repository für Studienprojekt. Details folgen...
